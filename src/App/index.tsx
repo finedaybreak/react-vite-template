@@ -1,49 +1,12 @@
-import { useState } from "react";
-import logo from "@/assets/logo.svg";
 import "./index.scss";
+import AppRouter from "@/router";
 
-function Index() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="App" data-component='app'>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button
-            type="button"
-            className="bg-blue-700 px-10px rounded shadow-xl text-16px"
-            onClick={() => setCount((count) => count + 1)}
-          >
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>Index.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  );
+function App() {
+    return (
+        <div className="App" data-component='app'>
+            <AppRouter/>
+        </div>
+    );
 }
 
-export default Index;
+export default App;

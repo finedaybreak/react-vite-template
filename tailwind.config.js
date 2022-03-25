@@ -3,7 +3,8 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const spacing = {};
 
 for (let i = 0; i < 2000; i++) {
-    spacing[i + 'px'] = i + 'px';
+    const px = i + 'px'
+    spacing[px] = px;
 }
 
 module.exports = {
@@ -52,17 +53,17 @@ module.exports = {
         },
         extend: {},
         screens: {
-            'pc-big': { max: '1535px' },
+            'pc-big': {max: '1535px'},
             // => @media (max-width: 1535px) { ... }
-            pc: { max: '1279px' },
+            pc: {max: '1279px'},
             // => @media (max-width: 1279px) { ... }
-            'pc-mini': { max: '1023px' },
+            'pc-mini': {max: '1023px'},
             // => @media (max-width: 1023px) { ... }
-            pad: { max: '767px' },
+            pad: {max: '767px'},
             // => @media (max-width: 767px) { ... }
-            'pad-mini': { max: '639px' },
+            'pad-mini': {max: '639px'},
             // => @media (max-width: 639px) { ... }
-            phone: { max: '380px' },
+            phone: {max: '380px'},
         },
     },
     plugins: [],
