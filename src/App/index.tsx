@@ -1,12 +1,12 @@
 import { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import logo from "@/assets/logo.svg";
+import "./index.scss";
 
-function App() {
+function Index() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className="App" data-component='app'>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
@@ -20,7 +20,7 @@ function App() {
           </button>
         </p>
         <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
+          Edit <code>Index.tsx</code> and save to test HMR updates.
         </p>
         <p>
           <a
@@ -46,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default Index;
