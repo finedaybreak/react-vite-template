@@ -1,9 +1,9 @@
-import {useState} from "react";
+import { useState } from "react";
 import logo from "@/assets/logo.svg";
 import "./index.scss";
-import {useNavigate} from "react-router-dom";
-import {useAppSelector, useAppDispatch} from '@/hooks'
-import {addAge, addAgeAsync, minAge, rename, renameAsync} from "@/store/slices/user";
+import { useNavigate } from "react-router-dom";
+import { useAppSelector, useAppDispatch } from '@/hooks'
+import { addAge, addAgeAsync, minAge, rename, renameAsync } from "@/store/slices/user";
 
 function Home() {
     const name = useAppSelector((state) => state.user.name)
@@ -15,8 +15,8 @@ function Home() {
     return (
         <div className="Home" data-component='home'>
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>Hello Vite + React!</p>
+                <img src={logo} className="App-logo" alt="logo" />
+                <p >Hello Vite + React!</p>
                 <p>
                     <button
                         type="button"
@@ -59,20 +59,20 @@ function Home() {
                         }}>add
                         </button>
                         <button className="bg-green-500 active:bg-green-700 px-20px ml-10px py-6px rounded shadow-xl text-16px"
-                                onClick={() => {
-                                    dispatch(minAge())
-                                }}>min
+                            onClick={() => {
+                                dispatch(minAge())
+                            }}>min
                         </button>
                         <button className="bg-orange-400 active:bg-orange-700 px-20px ml-10px py-6px rounded shadow-xl text-16px"
-                                onClick={() => {
-                                    dispatch(addAgeAsync())
-                                }}>add async
+                            onClick={() => {
+                                dispatch(addAgeAsync())
+                            }}>add async
                         </button>
                     </div>
                     <div className="mt-15px flex justify-center" >
-                        <input className="text-gray-100 w-300px bg-gray-900 ml-10px text-16px py-4px px-10px" placeholder="new name" onChange={(e) => {
+                        <input className="w-30vw h-5vh text-gray-100  bg-gray-900 ml-10px text-16px py-4px px-10px" placeholder="new name" onChange={(e) => {
                             dispatch(renameAsync(e.target.value))
-                        }}/>
+                        }} />
                     </div>
                 </div>
             </header>
