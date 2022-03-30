@@ -3,6 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const spacing = {};
 
 for (let f = 0; f < 100; f += 0.1) {
+    let sortNum = 0
     const decimal = Math.floor((f * 10) % 10)
     if (decimal !== 0) {
         sortNum = parseFloat(f.toFixed(1))
