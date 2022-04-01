@@ -1,9 +1,9 @@
 import {Route, Routes} from "react-router-dom";
 import {Suspense, lazy} from 'react'
+import GlobalLoading from "@/loadings/GlobalLoading";
 
 const About = lazy(() => import("@/pages/About"))
 const Home = lazy(() => import("@/pages/Home"))
-
 
 export default function AppRouter() {
     return (
@@ -23,5 +23,5 @@ export default function AppRouter() {
 }
 
 function Loading() {
-    return <div>loading...</div>
+    return <GlobalLoading/>
 }
